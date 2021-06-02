@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com links</title>
+</head>
+<body>
+    <h1>Usando links externos</h1>
+    <p>Você pode acessar o meu <a href="https://github.com/gustavoguanabara" target="_blank" rel="external">repositório público no Github</a></p>
+    <p>Você também acessar o meu <a href="https://www.youtube.com/channel/UCrWvhVmt0Qac3HgsjQK62FQ">canal gratuito no YouTube</a> </p>
+    <h1>Usando links interno</h1>
+    <p>Esta é a primeira página do site. Se você quiser, pode acessar também a minha <a href="pag002.html" rel="next">segundo página</a></p>
+    <p>Você também pode acessar a nossa <a href="noticias/pag003.html" rel="next">Página de notícias</a></p>
+    <h1>Links para download</h1>
+    <ul>
+        <li><a href="livro/meulivro.pdf" download="livro/meulivro.pdf" type="application/pdf">Baixar o livro em PDF</a></li>
+        <li><a href="livro/meulivro.zip" download="livro/meulivro.zip" type="application/zip">Livro compactado em ZIP</a></li>
+    </ul>
+
+
+    <h1>FAZER DEPOIS</h1>
+    Qual página você que ir? <input type="number" name="numPag" id="numPag" min="1" max="4"> (1-4)
+    <input type="button" value=">" onclick="selecionado()">
+    <a href="" id="selec"> <input type="button" value="Prosseguir" onclick="irPag()"></a>
+    </p>
+    <script>  /* fazer depois */
+        let numPag = document.getElementById('numPag')
+        let selec = document.getElementById('selec')
+        let pag = document.querySelector('href.pag')
+        function selecionado(){
+            if (numPag == 1) {
+                selec = "pag002.html"
+            }
+        }
+    </script>
+</body>
+</html>
