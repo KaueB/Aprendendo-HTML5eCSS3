@@ -1,11 +1,12 @@
 import './App.css';
+import Header from './header';
+import Main from './main.jsx';
 
 function App() {
   return (
     <div>
-      <header>
-        <h1>Título</h1>
-      </header>
+      <Header/>
+      <Main />
     </div>
   );
 }
