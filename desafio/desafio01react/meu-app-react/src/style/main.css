@@ -1,4 +1,14 @@
-div > h1 {
-    margin: 5rem;
+#conteudo {
     text-align: center;
+    padding-left: 22rem;
+    padding-right: 22rem;
+}
+
+#conteudo > aside {
+    margin-top: 6rem;
+}
+
+aside {
+    background-color: #fff;
+    padding: 10px;
 }
