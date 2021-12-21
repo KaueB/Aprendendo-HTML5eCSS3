@@ -1,4 +1,4 @@
-import './style/header.css';
+import React from "react";
 
 function Header() {
     return (
@@ -7,10 +7,7 @@ function Header() {
             <p id='subtitulo'>
                 Tudo aquilo que você sempre quis saber sobre o mundo Tech, em um único lugar
             </p>
-            <a href="#">Home</a>
-            <a href="#">Notícias</a>
-            <a href="#">Curiosidades</a>
-            <a href="#">Fale Conosco</a>
+            
         </header> 
     );
 }

@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'Android';
-    src: url('fontes/idroid.otf') format('opentype');
+    src: url('/fontes/idroid.otf') format('opentype');
 }
 
 :root {
@@ -21,10 +21,14 @@
     --fonte-android: 'Android', cursive;
 }
 
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     background-color: var(--cor0);
     font-family: var(--fonte-padrao);
-    text-align: center;
 }
 
 header {
