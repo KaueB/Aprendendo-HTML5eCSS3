@@ -3,3 +3,6 @@ body {
     font-family: var(--fonte-padrao);
 }
 
+* {
+    margin: 0px;
+}
