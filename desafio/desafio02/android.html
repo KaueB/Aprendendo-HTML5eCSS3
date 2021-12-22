@@ -9,16 +9,18 @@
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <h1>Curiosidades de Tecnologia</h1>
-        <p>Tudo aquilo que você sempre quis saber sobre o mundo Tech, em um único lugar</p>
-    </header>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Notícias</a>
-        <a href="#">Curiosidades</a>
-        <a href="#">Fale Conosco</a>
-    </nav>
+    <div id="header">
+        <header>
+            <h1>Curiosidades de Tecnologia</h1>
+            <p>Tudo aquilo que você sempre quis saber sobre o mundo Tech, em um único lugar</p>
+        </header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Notícias</a>
+            <a href="#">Curiosidades</a>
+            <a href="#">Fale Conosco</a>
+        </nav>
+    </div>
     <main>
         <article>
             <h1>História do Mascote do Android</h1>
@@ -26,15 +28,26 @@
             
             <h2>A primeira versão</h2>
             <p>A primeira tentativa de criar um mascote surgiu em 2007 e veio de um desenvolvedor chamado <a href="https://androidcommunity.com/dan-morrill-shows-us-the-android-mascot-that-almost-was-20130103/" target="_blank">Dan Morrill</a>. Ele conta que abriu o <a href="https://inkscape.org/pt-br/" target="_blank">Inkscape</a> (software livre para vetorização de imagens) e criou sua própria versão de robô. O objetivo era apenas personificar o sistema apenas para a a sua equipe, não existia nenhuma solicitação da empresa para a criação de um mascote.</p>
-            <img src="img/dan-droids.png" alt="Primeiro mascote do Android">
+
+            <picture>
+                <source media="(max-width: 670px)" srcset="./img/dan-droids-pq.png">
+                <img src="./img/dan-droids.png" alt="Dan Droids">
+            </picture>
+
             <p>Essa primeira versão bizarra até foi batizada em homenagem ao seu criador: seriam os <strong>Dandroids</strong>.</p>
             
             <h2>Surge um novo mascote</h2>
             <p>A ideia de ter um mascote foi amadurecendo e a missão foi passada para uma profissional da área. A ilustradora Russa <a href="https://www.irinablok.com/" target="_blank">Irina Blok</a>, também funcionária do Google, ficou com a missão de representar o pequeno robô de uma maneira mais agradável.</p>
-            <img src="img/irina-blok.jpg" alt="">
+            
+            <picture>
+                <source media="(max-width: 670px)" srcset="./img/irina-blok-pq.jpg">
+                <img src="img/irina-blok.jpg" alt="teste">
+            </picture>
+            
             <p>A ideia principal da Irina era representar tudo graficamente com poucos traços e de forma mais chapada. O desenho também deveria gerar identificação rápida com quem o olha. Surgiu então o <strong>Bugdroid</strong>, o novo mascote do Android.</p>
 
-            <img src="img/bugdroid.png" alt="Bugdroid">
+            <img src="img/bugdroid.png" alt="Bugdroid" class="pequena">
+
             <p>A ideia principal da Irina era representar tudo graficamente com poucos traços e de forma mais chapada. O desenho também deveria gerar identificação rápida com quem o olha. Surgiu então o <strong>Bugdroid</strong>, o novo mascote do Android.</p>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/l2UDgpLz20M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
