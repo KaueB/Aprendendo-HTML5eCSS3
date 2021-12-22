@@ -1,5 +1,7 @@
 import React from "react";
 
+import '../style/nav.css'
+
 function Nav() {
     return (
         <div>

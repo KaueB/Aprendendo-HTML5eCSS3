@@ -1,5 +1,7 @@
 import React from "react";
 
+import '../style/main.css'
+
 import bugdroid from '../img/bugdroid.png';
 import danDroids from '../img/danDroids.png';
 import danDroidsPq from '../img/danDroidsPq.png';

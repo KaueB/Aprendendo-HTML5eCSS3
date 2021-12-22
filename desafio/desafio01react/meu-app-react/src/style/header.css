@@ -1,0 +1,12 @@
+header {
+    background-color: var(--cor4);
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+}
+
+header > p {
+    color: white;
+}
