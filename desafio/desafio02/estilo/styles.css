@@ -14,10 +14,14 @@
     --cor1: #83e1ad;
     --cor2: #3ddc84;
     --cor3: #2fa866;
-    --cor4: #1a5c37;
+    --cor35:#2a9459;
+    --cor4: #257a4a;
+    --cor45:#1b5a37;
     --cor5: #063d1e;
 
-    /* Fontes */
+    
+    
+
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
     --fonte-destaque: 'Bebas Neue', cursive;
     --fonte-android: 'Android', cursive;
@@ -32,13 +36,17 @@ body {
     background-color: var(--cor0);
     font-family: var(--fonte-padrao);
 }
-
+/*  
 #header {
-    position: fixed; /* meme */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999px;
 }
-
+*/
 header {
-    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor35), var(--cor4), var(--cor45), var(--cor5));
     min-height: 150px;
     text-align: center;
     padding-top: 30px;
@@ -47,7 +55,7 @@ header {
 header > h1 {
     color: white;
     font-family: var(--fonte-destaque);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-size: 3rem;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
 }
@@ -56,7 +64,7 @@ header > p {
     color: white;
 
     font-family: var(--fonte-destaque);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 
     max-width: 600px;
     padding-left: 10px;
@@ -69,14 +77,14 @@ header > p {
 nav {
     background-color: var(--cor5);
     padding: 10px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
 }
 
 nav > a {
     color: white;
     padding: 10px;
     text-decoration: none;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 nav >a:hover {
@@ -89,6 +97,8 @@ main {
     margin: auto;
     margin-bottom: 30px;
     
+    /* margin-top: 220px; */
+
     min-width: 300px;
     max-width: 1000px;
 
@@ -106,7 +116,29 @@ main h1 {
 }
 
 main h2 {
+    color: var(--cor5);
     font-family: var(--fonte-android);
+}
+
+main p {
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1rem;
+    line-height: 1em;
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 0px 2px;
 }
 
 main img {
@@ -114,7 +146,7 @@ main img {
 }
 
 .pequena {
-    width: 50%;
+    max-width: 350px;
     display: block;
     margin: auto;
 }
@@ -122,4 +154,23 @@ main img {
 footer {
     background-color: var(--cor5);
     color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+footer > p {
+    text-align: center;
+}
+
+footer > p > a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
 }
