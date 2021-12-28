@@ -3,23 +3,24 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap');
-
 @font-face {
-  font-family: 'Android';
-  src: url('./fonts/idroid.otf') format('opentype');
+    font-family: 'Android';
+    src: url('./fonts/idroid.otf') format('opentype');
 }
 
 :root {
-  --cor0: #c5ebd6;
-  --cor1: #83e1ad;
-  --cor2: #3ddc84;
-  --cor3: #2fa866;
-  --cor4: #1a5c37;
-  --cor5: #063d1e;
+    /* Cores */
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor35:#2a9459;
+    --cor4: #257a4a;
+    --cor45:#1b5a37;
+    --cor5: #063d1e;
 
-  --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
-  --fonte-destaque: 'Bebas Neue', cursive;
-  --fonte-android: 'Android', cursive;
-  --fonte-imperial: 'Imperial Script', cursive;
+    /* Fontes */
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
 }

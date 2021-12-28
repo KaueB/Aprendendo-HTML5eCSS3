@@ -1,12 +1,29 @@
 header {
-    background-color: var(--cor4);
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor35), var(--cor4), var(--cor45), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 30px;
 }
 
 header > h1 {
     color: white;
     font-family: var(--fonte-destaque);
+    margin-bottom: 15px;
+    font-size: 3rem;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
 }
 
 header > p {
     color: white;
+
+    font-family: var(--fonte-destaque);
+    font-size: 1.2rem;
+
+    max-width: 600px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    margin-bottom: 30px;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
 }

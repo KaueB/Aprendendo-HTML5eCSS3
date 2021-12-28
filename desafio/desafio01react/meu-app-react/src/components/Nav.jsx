@@ -4,12 +4,12 @@ import '../style/nav.css'
 
 function Nav() {
     return (
-        <div>
+        <nav>
             <a href="#">Home</a>
             <a href="#">Notícias</a>
             <a href="#">Curiosidades</a>
             <a href="#">Fale Conosco</a>
-        </div>
+        </nav>
     );
 };
 

@@ -8,28 +8,44 @@ import danDroidsPq from '../img/danDroidsPq.png';
 import irinaBlok from '../img/irinaBlok.jpg';
 import irinaBlokPq from '../img/irinaBlokPq.jpg';
 
+import Footer from './Footer.jsx'
+
 function Main() {
     return (
+        <>
         <main>
             <article>
                 <h1>História do Mascote do Android</h1>
                 <p>Provavelmente você sabe que o sistema operacional <strong>Android</strong>, mantido pelo <strong>Google</strong> é um dos mais utilizados para dispositivos móveis em todo o mundo. Mas tavez você não saiba que o seu simpático mascote tem um nome e uma história muito curiosa? Pois acompanhe esse artigo para aprender muita coisa sobre esse robozinho.</p>
                 
                 <h2>A primeira versão</h2>
-                <p>A primeira tentativa de criar um mascote surgiu em 2007 e veio de um desenvolvedor chamado <a href="https://androidcommunity.com/dan-morrill-shows-us-the-android-mascot-that-almost-was-20130103/" target="_blank">Dan Morrill</a>. Ele conta que abriu o <a href="https://inkscape.org/pt-br/" target="_blank">Inkscape</a> (software livre para vetorização de imagens) e criou sua própria versão de robô. O objetivo era apenas personificar o sistema apenas para a a sua equipe, não existia nenhuma solicitação da empresa para a criação de um mascote.</p>
-                <img src={danDroids} alt="Primeiro mascote do Android"/>
+                <p>A primeira tentativa de criar um mascote surgiu em 2007 e veio de um desenvolvedor chamado <a href="https://androidcommunity.com/dan-morrill-shows-us-the-android-mascot-that-almost-was-20130103/" target="_blank">Dan Morrill</a>. Ele conta que abriu o <a href="https://inkscape.org/pt-br/" target="_blank" class="externo">Inkscape</a> (software livre para vetorização de imagens) e criou sua própria versão de robô. O objetivo era apenas personificar o sistema apenas para a a sua equipe, não existia nenhuma solicitação da empresa para a criação de um mascote.</p>
+            
+                <picture>
+                    <source media="(max-width: 670px)" srcset={danDroidsPq}/>
+                    <img src={danDroids} alt="Dan Droids"/>
+                </picture>
+
                 <p>Essa primeira versão bizarra até foi batizada em homenagem ao seu criador: seriam os <strong>Dandroids</strong>.</p>
                 
                 <h2>Surge um novo mascote</h2>
-                <p>A ideia de ter um mascote foi amadurecendo e a missão foi passada para uma profissional da área. A ilustradora Russa <a href="https://www.irinablok.com/" target="_blank">Irina Blok</a>, também funcionária do Google, ficou com a missão de representar o pequeno robô de uma maneira mais agradável.</p>
-                <img src={irinaBlok} alt="Irina Blok"/>
+                <p>A ideia de ter um mascote foi amadurecendo e a missão foi passada para uma profissional da área. A ilustradora Russa <a href="https://www.irinablok.com/" target="_blank" class="externo">Irina Blok</a>, também funcionária do Google, ficou com a missão de representar o pequeno robô de uma maneira mais agradável.</p>
+                
+                <picture>
+                    <source media="(max-width: 670px)" srcset={irinaBlokPq}/>
+                    <img src={irinaBlok} alt="teste"/>
+                </picture>
+
                 <p>A ideia principal da Irina era representar tudo graficamente com poucos traços e de forma mais chapada. O desenho também deveria gerar identificação rápida com quem o olha. Surgiu então o <strong>Bugdroid</strong>, o novo mascote do Android.</p>
 
-                <img src={bugdroid} alt="Bugdroid"/>
+                <img src={bugdroid} alt="Bugdroid" class="pequena"/>
+
                 <p>A ideia principal da Irina era representar tudo graficamente com poucos traços e de forma mais chapada. O desenho também deveria gerar identificação rápida com quem o olha. Surgiu então o <strong>Bugdroid</strong>, o novo mascote do Android.</p>
 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/l2UDgpLz20M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/l2UDgpLz20M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
                 <aside>
                     <h3>Quer aprender mais? </h3>
 
@@ -55,10 +71,13 @@ function Main() {
                     <p>Infelizmente, o <strong>Android Q</strong> não existiu, pois o Google resolveu pôr fim a essa divertida prática e começou a usar numerações, o que deu origem ao Android 10.</p>
                 </aside>
 
-                <p>Acesse aqui o site <a href="https://www.androidauthority.com/history-android-os-name-789433/" target="_blank">Android History</a> para conhecer a sequência das versões "adocicadas" e o que cada uma trouxe para o <strong>sistema Android</strong>z.</p>
+                <p>Acesse aqui o site <a href="https://www.androidauthority.com/history-android-os-name-789433/" target="_blank" class="externo">Android History</a> para conhecer a sequência das versões "adocicadas" e o que cada uma trouxe para o <strong>sistema Android</strong>z.</p>
 
             </article>
         </main>
+
+        <Footer/>
+        </>
     );
 };
 
