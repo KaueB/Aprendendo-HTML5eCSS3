@@ -1,16 +1,18 @@
 let result = document.getElementById("result");
 
-/* let operation = document.getElementById("operation"); */
+let resultAux = ""
 
 function appendToResult(value) {
   result.value += value;
 }
 
 function operation(value) {
-  result.value = value;
+  
 
-  console.log(result.value)
-}
+  result.value += value;
+} 
+
+
 
 function clearResult() {
   result.value = "";
