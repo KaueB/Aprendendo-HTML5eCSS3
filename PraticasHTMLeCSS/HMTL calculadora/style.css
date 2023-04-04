@@ -1,0 +1,102 @@
+body {
+  background-color: gray;
+}
+
+.calculator {
+  width: 240px;
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#result {
+  padding: 0;
+  width: 235px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.buttons button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background-color: #e0e0e0;
+  margin: 5px;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.divGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; 
+  grid-template-areas: 
+    "line01 line01 line01 line01"
+    "line02 line02 line02 line02"
+    "line03 line03 line03 line03"
+    "line04 line04 line04 line06"
+    "line05 line05 line05 line06"
+  ;
+}
+
+.line01 {
+  grid-area: line01;
+}
+
+.line02 {
+  grid-area: line02;
+}
+
+.line03 {
+  grid-area: line03;
+}
+
+.line04 {
+  grid-area: line04;
+}
+
+.line05 {
+  grid-area: line05;
+}
+
+.line06 {
+  grid-area: line06;
+}
+
+.divGrid>ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+#butNum0 {
+  width: 100px;
+  border-radius: 10px;
+}
+
+#butResult {
+  height: 92.5%;
+  border-radius: 10px;
+}
+
+#buttonStyle {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.buttonsYallow {
+  background-color: #ff8c00 !important; 
+  color: #fff !important;
+}
+
+.buttonsYallow button:active {
+  background-color: #ff8c00 !important;
+}
+
+.buttons button:active {
+  background-color: #b3b3b3;  
+}
