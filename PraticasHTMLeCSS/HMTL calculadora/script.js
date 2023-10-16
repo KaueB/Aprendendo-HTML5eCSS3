@@ -1,31 +1,34 @@
-let result = document.getElementById("result");
+var numberResult = document.getElementById('result').innHTML;
 
-let resultAux = ""
+let number01 = 0;
+let number02 = 0;
 
 function appendToResult(value) {
-  result.value += value;
-}
+  document.getElementById('result').innerHTML = numberResult + value;
+
+  number01 = Number(number01 + value)
+  console.log(number01)
+};
 
 function operation(value) {
+
+  document.getElementById('result').innerHTML += value
   
-
-  result.value += value;
-} 
-
-
+  
+  let lastCharacter = numberResult.value.slice(-1)
+  if (lastCharacter == '-' || '+' || '*' || '/') {
+    document.getElementById('result').innerHTML += ''
+  } else {
+    document.getElementById('result').innerHTML += value
+  };
+};
 
 function clearResult() {
-  result.value = "";
-}
-
-function calculateResult() {
-  try {
-    result.value = eval(result.value);
-  } catch (e) {
-    result.value = "Error";
-  }
-}
+  document.getElementById('result').innerHTML = ''
+  number01 = 0
+  number02 = 0
+};
 
 function clearNumber() {
-  
-}
+
+};

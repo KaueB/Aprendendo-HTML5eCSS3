@@ -2,12 +2,25 @@ body {
   background-color: gray;
 }
 
+#result {
+  background-color: white;
+  width: 207px;
+  height: 30px;
+  margin: 0px;
+  font-size: 25px;
+  color: black;
+  text-align: right;
+  padding: 5px;
+  border: 1px solid  black
+}
+
 .calculator {
   width: 240px;
   margin: 0 auto;
   background-color: #f7f7f7;
   border-radius: 5px;
   padding: 10px;
+  margin-top: calc(10%)
 }
 
 #result {
@@ -31,8 +44,8 @@ body {
 
 .divGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr; 
-  grid-template-areas: 
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
     "line01 line01 line01 line01"
     "line02 line02 line02 line02"
     "line03 line03 line03 line03"
@@ -89,7 +102,7 @@ body {
 }
 
 .buttonsYallow {
-  background-color: #ff8c00 !important; 
+  background-color: #ff8c00 !important;
   color: #fff !important;
 }
 
@@ -98,5 +111,5 @@ body {
 }
 
 .buttons button:active {
-  background-color: #b3b3b3;  
+  background-color: #b3b3b3;
 }
