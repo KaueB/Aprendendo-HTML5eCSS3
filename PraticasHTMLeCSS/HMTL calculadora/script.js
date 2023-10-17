@@ -14,16 +14,27 @@ function appendToResult(value) {
 
 function operation(value) {
   let lastCharacter = result.innerHTML.slice(-1);
-  let firstCharacter = result.innerHTML.slice(0)
-  if (result.innerHTML === '' && value !== '-') {
-    result.innerHTML = '';
-  } else if (firstCharacter === '+' && firstCharacter === '*' && firstCharacter === '/') {
-    result.innerHTML = '';
+
+  if (result.innerHTML === '' && value === '-') {
+    result.innerHTML += value;
+  } else if (result.innerHTML === '' && (value === '+' || value === '*' || value === '/')) {
+    result.innerHTML += '';
+    console.log('erro01');
+  } else if (result.innerHTML === '-') {
+    result.innerHTML += '';
+    console.log('erro02');
   } else if (lastCharacter !== '-' && lastCharacter !== '+' && lastCharacter !== '*' && lastCharacter !== '/') {
+    autoCalculate()
     result.innerHTML += value;
   } else {
     clearNumber();
     result.innerHTML += value;
+  }
+}
+
+function autoCalculate(value) {
+  if ((result.innerHTML.lastIndexOf('-') !== -1 && result.innerHTML.lastIndexOf(0) !== 0) || result.innerHTML.lastIndexOf('+') !== -1 || result.innerHTML.lastIndexOf('*') !== -1 || result.innerHTML.lastIndexOf('/') !== -1) {
+    calculateResult()
   }
 }
 
@@ -38,24 +49,31 @@ function clearNumber() {
 }
 
 function calculateResult() {
+  let count = result.innerHTML;
+
   let getOperation = '';
-  let calculateAux = '';
-  if (result.innerHTML.indexOf('-') !== -1 && result.innerHTML.slice(0) === '-') {
+  let calculateAux;
+
+  if (result.innerHTML.lastIndexOf('-') !== -1 && result.innerHTML.lastIndexOf('-') !== 0) {
     getOperation = '-';
-    calculateAux = result.innerHTML.indexOf('-');
-  } else if (result.innerHTML.indexOf('+') !== -1) {
+    calculateAux = result.innerHTML.lastIndexOf('-');
+  } else if (result.innerHTML.lastIndexOf('+') !== -1) {
     getOperation = '+';
-    calculateAux = result.innerHTML.indexOf('+');
-  } else if (result.innerHTML.indexOf('*') !== -1) {
+    calculateAux = result.innerHTML.lastIndexOf('+');
+  } else if (result.innerHTML.lastIndexOf('*') !== -1) {
     getOperation = '*';
-    calculateAux = result.innerHTML.indexOf('*');
-  } else if (result.innerHTML.indexOf('/') !== -1) {
+    calculateAux = result.innerHTML.lastIndexOf('*');
+  } else if (result.innerHTML.lastIndexOf('/') !== -1) {
     getOperation = '/';
-    calculateAux = result.innerHTML.indexOf('/');
+    calculateAux = result.innerHTML.lastIndexOf('/');
   }
 
   number01 = Number(result.innerHTML.slice(0, calculateAux));
-  number02 = Number(result.innerHTML.slice(calculateAux + 1));
+  if (result.innerHTML.slice(calculateAux + 1) === '') {
+    alert('O segundo numero foi considerado como "0"')
+  } else {
+    number02 = Number(result.innerHTML.slice(calculateAux + 1));
+  }
 
   switch (getOperation) {
     case '-':
@@ -74,9 +92,10 @@ function calculateResult() {
       break;
   }
 
-  /* console.clear()
-  console.log(getOperation);
-  console.log(calculateAux);
-  console.log(number01);
-  console.log(number02); */
-}
+  console.clear()
+  console.log(count)
+  console.log('Ponteiro de onde estava o sinal: ' + calculateAux);
+  console.log('Operacao: ' + getOperation);
+  console.log('Numero 01: ' + number01);
+  console.log('Numero 02: ' + number02);
+} 
