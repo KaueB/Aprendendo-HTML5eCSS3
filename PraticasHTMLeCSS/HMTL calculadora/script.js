@@ -32,7 +32,7 @@ function operation(value) {
   }
 }
 
-function autoCalculate(value) {
+function autoCalculate() {
   if ((result.innerHTML.lastIndexOf('-') !== -1 && result.innerHTML.lastIndexOf(0) !== 0) || result.innerHTML.lastIndexOf('+') !== -1 || result.innerHTML.lastIndexOf('*') !== -1 || result.innerHTML.lastIndexOf('/') !== -1) {
     calculateResult()
   }
@@ -70,23 +70,23 @@ function calculateResult() {
 
   number01 = Number(result.innerHTML.slice(0, calculateAux));
   if (result.innerHTML.slice(calculateAux + 1) === '') {
-    alert('O segundo numero foi considerado como "0"')
+    alert('Nao encontramos um segundo numero, entao foi considerado como "0"')
   } else {
     number02 = Number(result.innerHTML.slice(calculateAux + 1));
   }
 
   switch (getOperation) {
     case '-':
-      result.innerHTML = `${number01 - number02}`
+      result.innerHTML = `${(number01 - number02).toFixed(1)}`
       break;
     case '+':
-      result.innerHTML = `${number01 + number02}`
+      result.innerHTML = `${(number01 + number02).toFixed(1)}`
       break
     case '*':
-      result.innerHTML = `${number01 * number02}`
+      result.innerHTML = `${(number01 * number02).toFixed(1)}`
       break
     case '/':
-      result.innerHTML = `${number01 / number02}`
+      result.innerHTML = `${(number01 / number02).toFixed(1)}`
       break
     default:
       break;
