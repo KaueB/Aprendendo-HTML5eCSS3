@@ -7,7 +7,7 @@ function appendToResult(value) {
   let lastCharacter = result.innerHTML.slice(-1);
   if (value != '.') {
     result.innerHTML += value;
-  } else if (lastCharacter != '.' && lastCharacter != '') {
+  } else if (lastCharacter != '.' && lastCharacterIs(lastCharacter)) {
     result.innerHTML += value;
   }
 }
@@ -23,12 +23,20 @@ function operation(value) {
   } else if (result.innerHTML === '-') {
     result.innerHTML += '';
     console.log('erro02');
-  } else if (lastCharacter !== '-' && lastCharacter !== '+' && lastCharacter !== '*' && lastCharacter !== '/') {
+  } else if (lastCharacterIs(lastCharacter)) {
     autoCalculate()
     result.innerHTML += value;
   } else {
     clearNumber();
     result.innerHTML += value;
+  }
+}
+
+function lastCharacterIs(lastCharacter) {
+  if (lastCharacter !== '-' && lastCharacter !== '+' && lastCharacter !== '*' && lastCharacter !== '/') {
+    return true;
+  } else {
+    return false;
   }
 }
 
@@ -42,6 +50,13 @@ function clearResult() {
   result.innerHTML = '';
   number01 = 0;
   number02 = 0;
+
+  clearHistory();
+}
+
+function clearHistory() {
+  let history = document.querySelector('div#calculatorHistory > ul#history');
+  history.replaceChildren();
 }
 
 function clearNumber() {
@@ -52,27 +67,28 @@ function calculateResult() {
   let count = result.innerHTML;
 
   let getOperation = '';
-  let calculateAux;
+  let countAux;
 
   if (result.innerHTML.lastIndexOf('-') !== -1 && result.innerHTML.lastIndexOf('-') !== 0) {
     getOperation = '-';
-    calculateAux = result.innerHTML.lastIndexOf('-');
+    countAux = result.innerHTML.lastIndexOf('-');
   } else if (result.innerHTML.lastIndexOf('+') !== -1) {
     getOperation = '+';
-    calculateAux = result.innerHTML.lastIndexOf('+');
+    countAux = result.innerHTML.lastIndexOf('+');
   } else if (result.innerHTML.lastIndexOf('*') !== -1) {
     getOperation = '*';
-    calculateAux = result.innerHTML.lastIndexOf('*');
+    countAux = result.innerHTML.lastIndexOf('*');
   } else if (result.innerHTML.lastIndexOf('/') !== -1) {
     getOperation = '/';
-    calculateAux = result.innerHTML.lastIndexOf('/');
+    countAux = result.innerHTML.lastIndexOf('/');
   }
 
-  number01 = Number(result.innerHTML.slice(0, calculateAux));
-  if (result.innerHTML.slice(calculateAux + 1) === '') {
+  number01 = Number(result.innerHTML.slice(0, countAux));
+  if (result.innerHTML.slice(countAux + 1) === '') {
     alert('Nao encontramos um segundo numero, entao foi considerado como "0"')
+    number02 = 0
   } else {
-    number02 = Number(result.innerHTML.slice(calculateAux + 1));
+    number02 = Number(result.innerHTML.slice(countAux + 1));
   }
 
   switch (getOperation) {
@@ -92,10 +108,20 @@ function calculateResult() {
       break;
   }
 
+  history(count+' = '+result.innerHTML);
+
   console.clear()
   console.log(count)
-  console.log('Ponteiro de onde estava o sinal: ' + calculateAux);
+  console.log('Ponteiro de onde estava o sinal: ' + countAux);
   console.log('Operacao: ' + getOperation);
   console.log('Numero 01: ' + number01);
   console.log('Numero 02: ' + number02);
+}
+
+function history(count) {
+  let li = document.createElement('li');
+  li.textContent = count;
+
+  let element = document.querySelector('div.history > ul#history')
+  element.appendChild(li)
 } 
