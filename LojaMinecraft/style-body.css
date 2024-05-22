@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+    --background-color: #000000;
+    --text-color: #343A40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Nunito', sans-serif;
+    scrollbar-color: #222 #111111;
+    height: 10000px;
+}
+
+.app-children {
+    padding-top: 210px;
+}

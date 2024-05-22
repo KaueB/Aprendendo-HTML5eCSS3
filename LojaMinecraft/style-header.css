@@ -1,0 +1,125 @@
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 210px;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+}
+
+.logo-header {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.logo-header .logo {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.logo-header .logo img {
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    width: 125px;
+}
+
+.nav-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-container ul {
+    position: relative;
+    display: flex;
+}
+
+.nav-container ul li {
+    list-style: none;
+}
+
+.nav-container ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    transition: 0.6s;
+    padding: 15px 100px;
+    background-color: #fff;
+}
+
+.sticky .logo-header {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.sticky .logo-header .logo {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.sticky .logo-header .logo img {
+    position: relative;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    width: 50px;
+}
+
+.sticky .nav-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sticky .nav-container ul {
+    position: relative;
+    display: flex;
+}
+
+.sticky .nav-container ul li {
+    list-style: none;
+}
+
+.sticky .nav-container ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
