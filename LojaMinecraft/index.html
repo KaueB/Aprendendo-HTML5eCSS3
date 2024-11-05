@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <!-- <div class="app">
+    <div class="app">
         <div class="header">
             <div class="header-top">
                 <header class='header' id="header">
@@ -38,85 +38,9 @@
                 <p>Seja muito bem-vindo</p>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const app = document.createElement('div');
-            app.className = 'app';
-
-            const headerTop = document.createElement('div');
-            headerTop.className = 'header-top';
-
-            const header = document.createElement('header');
-            header.className = 'header';
-            header.id = 'header';
-
-            const logoLink = document.createElement('a');
-            logoLink.href = '/';
-            logoLink.className = 'logo-header';
-
-            const logoDiv = document.createElement('div');
-            logoDiv.className = 'logo';
-
-            const logoImg = document.createElement('img');
-            logoImg.src = 'logo.svg';
-            logoImg.alt = 'Error SGV!!';
-
-            logoDiv.appendChild(logoImg);
-            logoLink.appendChild(logoDiv);
-
-            const navContainer = document.createElement('div');
-            navContainer.className = 'nav-container';
-
-            const ul = document.createElement('ul');
-
-            const menuItems = [
-                { text: 'INICIO', href: '/' },
-                { text: 'COMPRAR', href: '/login' },
-                { text: 'TERMO', href: '/termo' },
-                { text: 'RANKER', href: '/ranker' },
-                { text: 'LOGIN / REGISTRO', href: '/login' }
-            ];
-
-            menuItems.forEach(item => {
-                const li = document.createElement('li');
-                const a = document.createElement('a');
-                a.href = item.href;
-                a.textContent = item.text;
-                li.appendChild(a);
-                ul.appendChild(li);
-            });
-
-            navContainer.appendChild(ul);
-            header.appendChild(logoLink);
-            header.appendChild(navContainer);
-            headerTop.appendChild(header);
-            app.appendChild(headerTop);
-
-            const appChildren = document.createElement('div');
-            appChildren.className = 'app-children';
-
-            const homeDiv = document.createElement('div');
-            homeDiv.className = 'home';
-
-            const h1 = document.createElement('h1');
-            h1.textContent = 'BEM-VINDO';
-
-            const p = document.createElement('p');
-            p.textContent = 'Seja muito bem-vindo';
-
-            homeDiv.appendChild(h1);
-            homeDiv.appendChild(p);
-            appChildren.appendChild(homeDiv);
-
-            app.appendChild(appChildren);
-
-            document.body.appendChild(app);
-        });
-
-        // js
-
         const header = document.getElementById('header');
 
         const handleScroll = () => {
